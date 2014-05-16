@@ -1,5 +1,1 @@
-$dig sudhan.me +nostats +nocomments +nocmd
-;sudhan.me
-
-sudhan.me.   73  IN  A 192.30.252.153
-sudhan.me.   73  IN  A 192.30.252.154
+sudhan.me   73  IN  A 192.30.252.153
