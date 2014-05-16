@@ -1,2 +1,4 @@
-$dig example.com +nostats +nocomments +nocmd
-sudhan.me     3600    IN A     199.27.73.133
+$dig sudhan.me +nostats +nocomments +nocmd
+;sudhan.me
+sudhan.me.   73  IN  A 192.30.252.153
+sudhan.me.   73  IN  A 192.30.252.154
