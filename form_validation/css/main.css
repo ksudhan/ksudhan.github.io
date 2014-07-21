@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+html,
+body { height: 100%; }
+body { 
+	margin: 0; 
+	padding: 10px;
+}
+.main {
+	margin: auto;
+	height: calc( 100% - 50px ); 
+	position: relative;
+}
+.demo { 
+	width: calc(50% - 5px);
+	border: 1px solid #666;
+	padding: 10px;
+	margin: 0 0 10px 0;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+	
+	height: 100%;
+
+	overflow: hidden;
+	overflow-y: scroll;
+} 
+.documentation { 
+	width: calc(50% - 5px);
+	border: 1px solid #666;
+
+	height: 100%;
+	
+	position: absolute;
+	right: 0;
+	top: 0;
+	
+
+	overflow: hidden;
+	overflow-y: scroll; 
+}
+h1 {
+	text-align: center;
+	margin: 0;
+	height: 50px;
+	line-height: 35px;
+	font-size: 25px;
+}

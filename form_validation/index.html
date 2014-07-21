@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Angular JS Form Validation</title>
+	<link href="form_validation/css/main.css" rel="stylesheet" />
+	<link href="form_validation/css/style.css" rel="stylesheet" />
+</head>
+<body ng-app="validatorDemo">
+	<h1>Angular JS Form Validation</h1>
+	<div class="main">
+		
+		
+		<div class="demo">
+			<div ng-controler="registerFormController" >
+				<form name="registerForm" novalidate="" role="form" ng-submit="signupUser( registerForm.$valid )" ng-class="{ 'show-invalid' : showInvalids }"> 
+		            <div class="form-group-wrap">                   
+			        	<div class="form-group col-6">
+			        		<label for="firstName" class="control-label label">First name:</label><span class="mandatory-field">*</span>
+			                <input type="text" class="form-control input-text " ng-minlength="1" ng-maxlength="100" required="" placeholder="First name" ng-model="formData.firstName"> <!--  id="firstName" name="firstName"  -->
+			                <ul class="form-field-error">
+			                    <li class="invalid error">Invalid first name</li>
+			                    <li class="required error">Enter first name</li>
+			                    <li class="maxlength error">First name should not exceed 100 characters</li>
+			                    <li class="minlength error">First name should have minimum a character</li>
+			                </ul>  
+			        	</div>        
+				            
+			            <div class="form-group col-6">
+			            	<label for="lastName" class="control-label label">Last name:</label><span class="mandatory-field">*</span>
+			                <input type="text" class="form-control input-text " ng-minlength="1" ng-maxlength="100" required="true" placeholder="Last name" ng-model="formData.lastName"><!-- id="lastName" name="lastName"  -->
+			                <ul class="form-field-error">
+			                    <li class="invalid error">Invalid last name</li>
+			                    <li class="required error">Enter last name</li>
+			                    <li class="maxlength error">Last name should not exceed 100 characters</li>
+			                    <li class="minlength error">Last name should have minimum a character</li>
+			                </ul>  
+			            </div>
+
+		            </div>
+			        
+			        <div class="form-group-wrap">      
+			            <div class="form-group col-6">
+			                <label for="email" class="control-label label">Email:</label><span class="mandatory-field">*</span>
+			                <input type="email" class="form-control input-text " ng-minlength="6" ng-maxlength="100" required="" placeholder="Email" ng-model="formData.email"><!-- id="email" name="email" -->
+			                <ul class="form-field-error">
+			                    <li class="invalid error">Invalid email address</li>
+			                    <li class="required error">Please enter your email address</li>
+			                    <li class="email error">Enter a valid email address</li>
+			                </ul> 
+			            </div>
+
+			            <div class="form-group col-6">
+			                <label for="phone" class="control-label label">Phone:</label>
+			                <input type="text" class="form-control input-text " ng-pattern="/^([0-9\(\)\/\+ \-]*)$/" placeholder="+xx-xxxxxxxxx" ng-model="formData.phone"><!-- id="phone" name="phone"  -->  
+			                <ul class="form-field-error">
+			                    <li class="invalid error">Invalid Phobe number</li>
+			                    <li class="pattern error">Enter a valid Phone number</li>
+			                </ul>
+			            </div>
+
+		            </div>
+		            
+		            <div class="form-group-wrap">                                    
+			            <div class="form-group col-6">
+			                <label for="password" class="control-label label">Password:</label><span class="mandatory-field">*</span>
+			                <input type="password" class="form-control input-text " ng-minlength="5" ng-maxlength="100" required="" id="pwd1" placeholder="Password" ng-model="formData.password"><!-- id="password" name="password" -->
+			                <ul class="form-field-error">
+			                    <li class="invalid error">Invalid Password</li>
+			                    <li class="required error">Enter Password</li>
+			                    <li class="maxlength error">Password should not exceed 100 characters</li>
+			                    <li class="minlength error">Password should have minimum 5 characters</li>
+			                </ul>  
+			            </div>
+
+			            <div class="form-group col-6">
+			                <label for="confirmPassword" class="control-label label">Confirm password:</label><span class="mandatory-field">*</span>
+			                <input type="password" class="form-control input-text " ng-minlength="5" ng-maxlength="100" required="" placeholder="Confirm password" ng-model="formData.confirmPassword" inputchange="validatePassword()" pwd-check="pwd1"><!-- id="confirmPassword" name="confirmPassword"  -->
+			                <ul class="form-field-error">
+			                    <li class="invalid error">Invalid Password</li>
+			                    <li class="required error">Confirm your password</li>
+			                    <li class="maxlength error">Password should not exceed 100 characters</li>
+			                    <li class="minlength error">Password should have minimum 5 characters</li>
+			                    <li class="confirm-password error">Passwords dont match</li>
+			                </ul> 
+			            </div>
+
+		            </div>
+		                                                  
+		            <div class="btn-holder">
+		                <input type="submit" value="Sign Up" class="btn btn-theme-blue btn-register">
+		            </div>
+		        </form>	
+			</div>
+			
+		</div>
+		<div class="documentation" >
+			
+		</div>
+	</div>
+	<script src="form_validation/js/jquery.js" ></script>
+	<script src="form_validation/js/angular.js" ></script>
+	<script src="form_validation/js/app.js" ></script>
+</body>
+</html>

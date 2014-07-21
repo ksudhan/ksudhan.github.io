@@ -1,0 +1,76 @@
+.form-group-wrap { 
+	overflow: hidden; 
+	margin: 0 0 10px 0;
+}
+.form-group  { float: left; }
+.form-group:last-child { margin: 0 0 0 5%; }
+.col-6 { width: 47.5%; }
+.label {
+	display: inline-block;
+	margin-bottom: 5px;
+	
+	font-size: 15px;
+	line-height: 15px;
+	text-align: left;
+	text-transform: capitalize;
+}
+.mandatory-field { color: red; }
+.input-text { 
+	width: 100%;
+	display: block;
+}
+
+
+
+
+
+.form-field-error {
+	line-height: 1;
+	font-size: 13px;
+	color: #ff0000;
+	margin: 0;
+	padding: 0;
+}
+.form-field-error .error { 
+	/*padding: 0 0 0 0;*/
+	margin: 5px 0 0 0;
+	padding: 0 0 0 10px;
+	position: relative;
+	display: none; 
+}
+.form-field-error .error:after {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 2px;
+	background-color: #ff0000;
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	margin-top: -1px;
+}
+.form-field-error .invalid:after {
+	content: "";
+	display: inline-block;
+	width: 2px;
+	height: 2px;
+	background-color: #f0ad4e;
+	position: absolute;
+	left: 4px;
+	top: 50%;
+	margin-top: -1px;
+}
+
+.ng-dirty.ng-invalid-required:not(:focus) + .form-field-error .required { display: block; }
+.ng-dirty.ng-invalid-maxlength:not(:focus) + .form-field-error .maxlength { display: block; }
+.ng-dirty.ng-invalid-minlength:not(:focus) + .form-field-error .minlength { display: block; }
+.ng-dirty.ng-invalid-email:not(:focus) + .form-field-error .email {  display: block; }
+.ng-dirty.ng-invalid-pattern:not(:focus) + .form-field-error .pattern {  display: block; }
+
+.show-invalid .ng-invalid + .form-field-error .invalid { 
+	color: #f0ad4e;
+	display: block; 
+}
+
+
+.ng-dirty.ng-invalid-pwdmatch:not(:focus) + .form-field-error .confirm-password {  display: block; }
