@@ -1,0 +1,20 @@
+ body { background-color: #999; }
+.wrapper { 
+	width: 980px;
+	margin: 20px auto 20px;
+	background-color: #fff;
+	min-height: 300px; 
+	position: relative;
+}
+.movable {
+	cursor: pointer;
+	
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.js-startMoving {}
